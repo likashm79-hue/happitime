@@ -109,9 +109,23 @@ z-index:-1;
 }
 
 .hero-content{
-max-width:900px;
-padding:20px;
+width:min(1400px,90%);
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:80px;
 z-index:2;
+}
+
+.hero-left{
+flex:1;
+}
+
+.hero-right{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
 .eyebrow{
@@ -122,9 +136,14 @@ margin-bottom:20px;
 
 .hero h1{
 font-family:'Cormorant Garamond',serif;
-font-size:clamp(3rem,8vw,7rem);
-line-height:1;
-margin-bottom:25px;
+font-size:clamp(4rem,9vw,8rem);
+line-height:.9;
+margin-bottom:30px;
+
+letter-spacing:4px;
+
+text-shadow:
+0 0 40px rgba(212,175,55,.2);
 }
 
 .hero-description{
@@ -719,6 +738,79 @@ scale(1);
 transform:
 translate(-80px,60px)
 scale(1.2);
+}
+
+}
+
+.hero-right img{
+width:100%;
+max-width:550px;
+border-radius:40px;
+
+box-shadow:
+0 40px 120px rgba(212,175,55,.15);
+
+animation:floatImage 8s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-20px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+.hero-badges{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin-top:40px;
+}
+
+.hero-badges div{
+padding:15px 24px;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(30px);
+
+border:1px solid rgba(212,175,55,.15);
+
+border-radius:50px;
+
+transition:.5s;
+}
+
+.hero-badges div:hover{
+transform:translateY(-10px);
+
+box-shadow:
+0 20px 60px rgba(212,175,55,.2);
+
+border-color:#d4af37;
+}
+@media(max-width:1000px){
+
+.hero-content{
+flex-direction:column;
+text-align:center;
+gap:40px;
+}
+
+.hero-right img{
+max-width:400px;
+}
+
+.hero-badges{
+justify-content:center;
 }
 
 }
