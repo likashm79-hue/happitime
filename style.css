@@ -148,6 +148,8 @@ border-radius:60px;
 text-decoration:none;
 font-weight:600;
 transition:.4s;
+position:relative;
+overflow:hidden;
 }
 
 .btn-gold{
@@ -656,4 +658,28 @@ animation-delay:1s;
 
 .counter-card{
 animation-delay:1.5s;
+}
+.btn::before{
+content:'';
+position:absolute;
+top:0;
+left:-120%;
+width:60%;
+height:100%;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.4),
+transparent
+);
+
+transform:skewX(-20deg);
+
+transition:1s;
+}
+
+.btn:hover::before{
+left:150%;
 }
