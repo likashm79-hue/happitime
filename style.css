@@ -799,18 +799,61 @@ border-color:#d4af37;
 }
 @media(max-width:1000px){
 
+.hero{
+height:auto;
+padding-top:120px;
+padding-bottom:80px;
+}
+
 .hero-content{
 flex-direction:column;
 text-align:center;
 gap:40px;
 }
 
+.hero-left{
+width:100%;
+}
+
+.hero-right{
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
 .hero-right img{
-max-width:400px;
+width:90%;
+max-width:320px;
+border-radius:30px;
+}
+
+.hero h1{
+font-size:clamp(3rem,14vw,5rem);
+line-height:.9;
+}
+
+.hero-description{
+max-width:100%;
+font-size:1rem;
+}
+
+.hero-actions{
+justify-content:center;
 }
 
 .hero-badges{
 justify-content:center;
+gap:10px;
+}
+
+.hero-badges div{
+padding:12px 18px;
+font-size:.9rem;
+}
+
+.floating-card{
+display:none;
 }
 
 }
