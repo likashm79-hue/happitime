@@ -379,8 +379,13 @@ background-image:url('https://images.unsplash.com/photo-1509042239860-f550ce710b
 background-image:url('https://images.unsplash.com/photo-1540713434306-58505cf1b6fc');
 height:420px;
 }
+.gallery-item{
+transition:all .7s ease;
+}
+
 .gallery-item:hover{
-transform:scale(1.03);
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 25px 80px rgba(212,175,55,.25);
 }
 
 .testimonial-slider{
