@@ -150,9 +150,3 @@ document.querySelector('.contact-form')
 e.preventDefault();
 alert('Thank you for contacting Happi Time.');
 });
-const glow = document.querySelector(".cursor-glow");
-
-document.addEventListener("mousemove", (e) => {
-    glow.style.left = e.clientX + "px";
-    glow.style.top = e.clientY + "px";
-});
